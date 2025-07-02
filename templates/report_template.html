@@ -7,10 +7,10 @@ Key design decisions to avoid PDF generation issues:
 1. INLINE CSS ONLY: No external stylesheets to prevent network errors
 2. BASE64 IMAGES: All images embedded as data URLs for self-contained reports  
 3. NO EXTERNAL DEPENDENCIES: Bootstrap CSS replaced with custom inline styles
-4. PDF-OPTIMIZED: Styles designed for proper PDF rendering with wkhtmltopdf
+4. PDF-OPTIMIZED: Styles designed for proper PDF rendering with weasyprint
 
-The template solves the common "ProtocolUnknownError" issue that occurs when
-wkhtmltopdf tries to access external resources (CDN links, external images).
+The template solves common PDF generation issues by eliminating external
+resource dependencies and using pure Python PDF generation with weasyprint.
 
 Author: NYC Taxi Project
 Date: 2025
