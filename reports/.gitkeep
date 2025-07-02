@@ -1,0 +1,7 @@
+# This file ensures the reports directory exists in the repository
+# 
+# Generated HTML and PDF reports will be saved here:
+# - eda_report.html (comprehensive analysis report)
+# - eda_report.pdf (PDF version of the report)
+# 
+# Note: Generated report files are excluded by .gitignore

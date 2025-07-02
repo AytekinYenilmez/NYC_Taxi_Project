@@ -1,0 +1,7 @@
+# This file ensures the data directory exists in the repository
+# 
+# Place your NYC taxi parquet files here:
+# - yellow_tripdata_2023-01.parquet (or similar)
+# 
+# Note: Large data files are excluded by .gitignore
+# Download data from: https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page

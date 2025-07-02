@@ -9,25 +9,25 @@
 # Exclude large parquet files and datasets
 *.parquet
 *.csv
-data/
+data/*
 !data/.gitkeep
 
 # Database files (contain processed data)
 *.db
 *.sqlite
 *.sqlite3
-db/
+db/*
 !db/.gitkeep
 
 # ================================
 # GENERATED OUTPUTS
 # ================================
 # Generated plots and visualizations
-plots/
+plots/*
 !plots/.gitkeep
 
 # Generated reports (HTML/PDF outputs)
-reports/
+reports/*
 !reports/.gitkeep
 
 # Temporary plot files

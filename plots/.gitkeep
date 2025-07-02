@@ -1,0 +1,10 @@
+# This file ensures the plots directory exists in the repository
+# 
+# Generated visualization plots will be saved here:
+# - trip_distance.png
+# - duration_distribution.png
+# - fare_vs_distance.png
+# - hourly_distribution.png
+# - weekday_distribution.png
+# 
+# Note: Generated plot files are excluded by .gitignore
