@@ -1,0 +1,28 @@
+# NYC Taxi Data Analytics Pipeline - Dependencies
+# 
+# Core Data Processing
+pandas>=1.5.0,<2.0.0           # Data manipulation and analysis
+pyarrow>=10.0.0                # Parquet file support
+sqlalchemy>=1.4.0,<2.0.0       # Database ORM and connectivity
+
+# Visualization
+matplotlib>=3.6.0              # Core plotting library
+seaborn>=0.12.0                # Statistical visualization
+
+# Workflow Orchestration
+prefect>=2.10.0                # Modern workflow management
+
+# Report Generation
+jinja2>=3.1.0                  # HTML templating engine
+pdfkit>=1.0.0                  # PDF generation from HTML
+weasyprint>=59.0               # Alternative PDF engine (fallback)
+
+# Additional Dependencies (automatically installed)
+# numpy>=1.21.0                # Numerical computing (via pandas)
+# pillow>=9.0.0                # Image processing (via matplotlib)
+# requests>=2.28.0             # HTTP library (via prefect)
+
+# Development Dependencies (optional)
+# jupyter>=1.0.0               # Notebook environment
+# pytest>=7.0.0                # Testing framework
+# black>=22.0.0                # Code formatting

@@ -1,0 +1,140 @@
+<!--
+NYC Taxi EDA Report Template
+
+This HTML template is specifically designed for PDF conversion compatibility.
+Key design decisions to avoid PDF generation issues:
+
+1. INLINE CSS ONLY: No external stylesheets to prevent network errors
+2. BASE64 IMAGES: All images embedded as data URLs for self-contained reports  
+3. NO EXTERNAL DEPENDENCIES: Bootstrap CSS replaced with custom inline styles
+4. PDF-OPTIMIZED: Styles designed for proper PDF rendering with wkhtmltopdf
+
+The template solves the common "ProtocolUnknownError" issue that occurs when
+wkhtmltopdf tries to access external resources (CDN links, external images).
+
+Author: NYC Taxi Project
+Date: 2025
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NYC Taxi EDA Report</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+
+        h4 {
+            color: #7f8c8d;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        pre {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 15px;
+            overflow-x: auto;
+            font-size: 14px;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        table th,
+        table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        table tbody tr:nth-child(odd) {
+            background-color: #f8f9fa;
+        }
+
+        .table-striped tbody tr:nth-child(odd) {
+            background-color: rgba(0, 0, 0, .05);
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        strong {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>NYC Taxi Data - Exploratory Data Analysis Report</h1>
+
+    <h2>Dataset Overview</h2>
+    <p><strong>Shape:</strong> {{ shape }}</p>
+    <pre><code>{{ dtypes }}</code></pre>
+
+    <h2>Missing Values</h2>
+    <pre><code>{{ nulls }}</code></pre>
+
+    <h2>Descriptive Statistics</h2>
+    {{ describe | safe }}
+
+    <h2>Visualizations</h2>
+    {% for plot in plots %}
+    <h4>{{ plot.name }}</h4>
+    <img src="{{ plot.data }}" alt="{{ plot.name }}">
+    {% endfor %}
+
+</body>
+
+</html>
