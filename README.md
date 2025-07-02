@@ -288,7 +288,7 @@ This project is licensed under the MIT License. See LICENSE file for details.
 
 ## 🙋‍♂️ Support
 
-For issues, questions, or contributions, please create an issue in the repository or contact the development team.
+For issues, questions, or contributions, please create an issue in the repository or contact Aytekin Yenilmez.
 
 ---
 
